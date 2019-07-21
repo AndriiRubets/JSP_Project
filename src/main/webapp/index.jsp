@@ -1,5 +1,11 @@
+
 <html>
+<head>
+    <title>Title</title>
+</head>
 <body>
-<h2>Hello World!</h2>
+<div>
+komunikat informacyjny
+</div>
 </body>
 </html>
