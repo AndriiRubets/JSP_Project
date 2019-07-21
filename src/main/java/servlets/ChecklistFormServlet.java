@@ -25,6 +25,7 @@ public class ChecklistFormServlet extends HttpServlet {
         Checklist checklist = new Checklist();
         checklist.setName(req.getParameter("name"));
         boolean checked =((archived != null)&& archived.equalsIgnoreCase("on"));
+        checklist.setArchived(checked);
 
         dao.saveOrUpdate(checklist);
         resp.sendRedirect("/checklist/list");

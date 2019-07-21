@@ -34,7 +34,7 @@
             out.print("<td>"+s.getDateCreated()+"</td>");
             out.print("<td>"+s.getDateCompleted()+"</td>");
             out.print("<td>" +
-                    "<a href=\"/checklist/remove?studentId="+s.getId()+"\">Remove</a>"+
+                    "<a href=\"/checklist/remove?checklistId="+s.getId()+"\">Remove</a>"+
                     "</td>");
             out.print("</tr>");
         }
