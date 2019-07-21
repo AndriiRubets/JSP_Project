@@ -5,7 +5,9 @@
 </head>
 <body>
 <div>
-komunikat informacyjny
+    <jsp:include page="header.jsp"></jsp:include>
+
+    komunikat informacyjny
 </div>
 </body>
 </html>
