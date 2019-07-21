@@ -1,5 +1,6 @@
 package servlets;
 
+import Database.EntityDao;
 import model.Checklist;
 
 import javax.servlet.ServletException;
@@ -11,6 +12,7 @@ import java.io.IOException;
 
 @WebServlet("/checklist/add")
 public class ChecklistFormServlet extends HttpServlet {
+    private EntityDao dao = new EntityDao();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/checklist/form.jsp").forward(req, resp);
@@ -24,6 +26,7 @@ public class ChecklistFormServlet extends HttpServlet {
         checklist.setName(req.getParameter("name"));
         boolean checked =((archived != null)&& archived.equalsIgnoreCase("on"));
 
+        dao.saveOrUpdate(checklist);
         resp.sendRedirect("/checklist/list");
     }
 }
