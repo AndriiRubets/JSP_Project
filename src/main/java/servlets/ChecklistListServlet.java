@@ -2,7 +2,6 @@ package servlets;
 
 import Database.EntityDao;
 import model.Checklist;
-import model.ChecklistItem;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
